@@ -1,0 +1,19 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx", // This is for vscode not to suggest importing React, after react17.
+    "incremental": true, // improved build speeds.
+    "baseUrl": "src",
+    "isolatedModules": false,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true, // avoid accidental fallthrough.
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // alias only for ../src
+    "paths": {
+      "@/*": ["../src/*"]
+    }
+  },
+  "include": ["src/**/*.tsx", "src/**/*.ts"]
+}

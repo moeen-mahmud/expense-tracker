@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": "@react-native",
+  "parser": "@typescript-eslint/parser",
+
+  "plugins": ["@typescript-eslint", "react-hooks", "unused-imports", "no-autofix"],
+
+  "rules": {
+    "quotes": ["warn", "double"],
+
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-no-leaked-render": ["error", { "validStrategies": ["coerce", "ternary"] }],
+    "react-hooks/rules-of-hooks": "error",
+
+    "unused-imports/no-unused-imports": "warn",
+    "no-autofix/unused-imports/no-unused-imports": "warn",
+
+    "@typescript-eslint/no-unused-vars": ["warn"],
+
+    // add rules from prettier
+    "singleQuote": "off"
+  }
+}
